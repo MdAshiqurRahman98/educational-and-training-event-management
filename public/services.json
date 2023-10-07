@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Workshops and Webinars",
+        "image": "https://example.com/workshops.jpg",
+        "price": 49,
+        "short_description": "Interactive online workshops and webinars.",
+        "description": "Join our interactive online workshops and webinars to learn from industry experts. These sessions cover a wide range of topics, offering valuable insights and networking opportunities."
+    },
+    {
+        "id": 2,
+        "name": "Educational Conferences",
+        "image": "https://example.com/conferences.jpg",
+        "price": 299,
+        "short_description": "Explore educational conferences on various topics.",
+        "description": "Immerse yourself in educational conferences that bring together thought leaders and professionals. Gain knowledge, network, and stay updated on the latest trends and practices."
+    },
+    {
+        "id": 3,
+        "name": "Training Programs",
+        "image": "https://example.com/training.jpg",
+        "price": 199,
+        "short_description": "Comprehensive training programs for skill development.",
+        "description": "Our comprehensive training programs are designed to help you develop valuable skills. Whether you're a beginner or an expert, you'll find courses tailored to your needs."
+    },
+    {
+        "id": 4,
+        "name": "Online Courses",
+        "image": "https://example.com/online-courses.jpg",
+        "price": 29,
+        "short_description": "Flexible online courses for self-paced learning.",
+        "description": "Take advantage of our flexible online courses for self-paced learning. Access a library of courses covering diverse subjects, all designed to fit your schedule."
+    },
+    {
+        "id": 5,
+        "name": "Professional Development Seminars",
+        "image": "https://example.com/seminars.jpg",
+        "price": 79,
+        "short_description": "Seminars to boost your professional growth.",
+        "description": "Boost your professional growth with our seminars. Gain practical skills, leadership insights, and strategies to advance your career. Join industry experts in dynamic sessions."
+    },
+    {
+        "id": 6,
+        "name": "Career Workshops",
+        "image": "https://example.com/career-workshops.jpg",
+        "price": 59,
+        "short_description": "Workshops to help you excel in your career.",
+        "description": "Excel in your career with our specialized workshops. Receive guidance on resume building, interview skills, and career advancement strategies. Get ready to achieve your career goals."
+    }
+]
