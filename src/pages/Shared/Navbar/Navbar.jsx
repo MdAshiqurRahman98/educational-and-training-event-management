@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
     return (
         <div className="">
-            <nav className="flex justify-between py-5 mb-24 items-center">
-                <figure><img className="w-[79%]" src="/public/Resources/Logo.png" alt="" /></figure>
+            <nav className="flex justify-between py-1 mb-3 items-center">
+                <figure><img className="w-[300px] h-[100px] -ml-14 mt-2" src="/public/logo.png" alt="" /></figure>
                 <ul className="flex gap-5">
                     <li className="text-lg">
                         <NavLink
