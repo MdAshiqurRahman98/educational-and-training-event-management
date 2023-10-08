@@ -34,13 +34,13 @@ const Login = () => {
             <form onSubmit={handleLogin} className=" md:w-3/4 lg:w-1/2 mx-auto">
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Email</span>
+                        <span className="label-text font-medium">Email</span>
                     </label>
                     <input type="email" required name="email" placeholder="Email" className="input input-bordered" />
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Password</span>
+                        <span className="label-text font-medium">Password</span>
                     </label>
                     <input type="password" required name="password" placeholder="Password" className="input input-bordered" />
                     <label className="label">
@@ -48,7 +48,7 @@ const Login = () => {
                     </label>
                 </div>
                 <div className="form-control mt-6">
-                    <button className="btn text-white bg-[#FF444A]">Login</button>
+                    <button className="btn text-white bg-[#FF444A] hover:bg-[#FF444A]">Login</button>
                 </div>
             </form>
             <p className="text-center mt-4">Don`t have an account? <Link className="text-[#FF444A] font-bold" to="/register">Register</Link></p>

@@ -34,25 +34,25 @@ const Register = () => {
             <form onSubmit={handleRegister} className=" md:w-3/4 lg:w-1/2 mx-auto">
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Name</span>
+                        <span className="label-text font-medium">Name</span>
                     </label>
                     <input type="text" required name="name" placeholder="Name" className="input input-bordered" />
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Photo URL</span>
+                        <span className="label-text font-medium">Photo URL</span>
                     </label>
                     <input type="text" required name="photo" placeholder="Photo URL" className="input input-bordered" />
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Email</span>
+                        <span className="label-text font-medium">Email</span>
                     </label>
                     <input type="email" required name="email" placeholder="Email" className="input input-bordered" />
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Password</span>
+                        <span className="label-text font-medium">Password</span>
                     </label>
                     <input type="password" required name="password" placeholder="Password" className="input input-bordered" />
                     <label className="label">
@@ -60,7 +60,7 @@ const Register = () => {
                     </label>
                 </div>
                 <div className="form-control mt-6">
-                    <button className="btn text-white bg-[#FF444A]">Register</button>
+                    <button className="btn text-white bg-[#FF444A] hover:bg-[#FF444A]">Register</button>
                 </div>
             </form>
             <p className="text-center mt-4">Already have an account? <Link className="text-[#FF444A] font-bold" to="/login">Login</Link></p>

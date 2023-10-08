@@ -1,7 +1,17 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => console.log('user logged out successfully'))
+            .catch(error => console.error(error))
+    }
+
     return (
         <div>
             <nav className="flex justify-between py-1 mb-3 items-center">
@@ -54,21 +64,6 @@ const Navbar = () => {
 
                     <li className="text-lg">
                         <NavLink
-                            to="/login"
-                            className={({ isActive, isPending }) =>
-                                isPending
-                                    ? "pending"
-                                    : isActive
-                                        ? "text-[#FF444A] text-lg font-bold"
-                                        : ""
-                            }
-                        >
-                            Login
-                        </NavLink>
-                    </li>
-
-                    <li className="text-lg">
-                        <NavLink
                             to="/register"
                             className={({ isActive, isPending }) =>
                                 isPending
@@ -81,6 +76,46 @@ const Navbar = () => {
                             Register
                         </NavLink>
                     </li>
+
+                    <li className="text-lg">
+                        {
+                            user ? <>
+                                <span className="mr-1 ml-24">{user.email}</span>
+                                <span className="mr-3">{user.displayName}</span>
+                                <span className="mr-3"><img src={user.photoURL} alt="" /></span>
+                                <NavLink
+                                    onClick={handleLogOut}
+                                >
+                                    Logout
+                                </NavLink>
+                            </>
+                                : <NavLink
+                                    to="/login"
+                                    className={({ isActive, isPending }) =>
+                                        isPending
+                                            ? "pending"
+                                            : isActive
+                                                ? "text-[#FF444A] text-lg font-bold"
+                                                : ""
+                                    }
+                                >
+                                    Login
+                                </NavLink>
+                        }
+                    </li>
+
+                    {/* <li>
+                        {
+                            user ? <>
+                                <span className="mr-1">{user.email}</span>
+                                <span className="mr-3">{user.displayName}</span>
+                                <a onClick={handleLogOut} className="btn btn-sm mr-3 normal-case">Logout</a>
+                            </>
+                                : <Link to="/login">
+                                    <button className="btn btn-sm mr-3 normal-case">Login</button>
+                                </Link>
+                        }
+                    </li> */}
                 </ul>
             </nav>
         </div>
