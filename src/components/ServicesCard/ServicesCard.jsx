@@ -1,23 +1,28 @@
-/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-
+import PropTypes from 'prop-types';
 
 const ServicesCard = ({ service }) => {
     const { id, name, image, price, short_description } = service || {};
 
     return (
-        <Link to={`/services/${id}`}>
-            <div className="rounded-lg">
-                <div className="mb-1">
-                    <img src={image} alt="" />
-                </div>
-                <div className="p-3">
-                    <h2 className="text-xs font-medium mb-1 w-min px-2 py-[2px] rounded-sm">{name}</h2>
-                    <p className="text-lg font-semibold">{short_description}</p>
-                </div>
+        <div className="card rounded-lg p-5 bg-[#F8F8F8] h-96">
+            <div className="mb-1 flex flex-grow justify-center">
+                <img className="w-40 h-36" src={image} alt="" />
             </div>
-        </Link>
+            <div>
+                <h3 className="text-xl font-bold mt-3 mb-1 px-2 py-[2px]">{name}</h3>
+                <p className="text-left mb-1">{short_description}</p>
+                <p className="text-sm font-semibold mt-2 mb-1">Price: ${price}.00</p>
+                <Link to={`/services/${id}`}>
+                    <button className="btn btn-sm text-white bg-[#FF444A] hover:bg-[#FF444A] normal-case text-[15px] font-semibold rounded mt-3">View Details</button>
+                </Link>
+            </div>
+        </div>
     );
 };
 
 export default ServicesCard;
+
+ServicesCard.propTypes = {
+    service: PropTypes.object
+}
