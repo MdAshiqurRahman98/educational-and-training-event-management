@@ -7,6 +7,7 @@ import Dashboard from "../pages/Dashboard/Dashboard";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import ServiceDetail from "../pages/ServiceDetail/ServiceDetail";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -21,12 +22,12 @@ const router = createBrowserRouter([
             },
             {
                 path: '/eventCart',
-                element: <EventCart></EventCart>,
+                element: <PrivateRoute><EventCart></EventCart></PrivateRoute>,
                 loader: () => fetch('/services.json')
             },
             {
                 path: '/dashboard',
-                element: <Dashboard></Dashboard>,
+                element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
                 loader: () => fetch('/services.json')
             },
             {
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/services/:id',
-                element: <ServiceDetail></ServiceDetail>,
+                element: <PrivateRoute><ServiceDetail></ServiceDetail></PrivateRoute>,
                 loader: () => fetch('/services.json')
             }
         ]
