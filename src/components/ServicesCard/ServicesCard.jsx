@@ -10,9 +10,9 @@ const ServicesCard = ({ service }) => {
                 <img className="w-40 h-36" src={image} alt="" />
             </div>
             <div>
-                <h3 className="text-xl font-bold mt-3 mb-1 px-2 py-[2px]">{name}</h3>
+                <h3 className="text-xl font-bold text-center mt-3 mb-1 px-2 py-[2px]">{name}</h3>
                 <p className="text-left mb-1">{short_description}</p>
-                <p className="text-sm font-semibold mt-2 mb-1">Price: ${price}.00</p>
+                <p className="text-sm font-semibold text-center mt-2 mb-1">Price: ${price}.00</p>
                 <Link to={`/services/${id}`}>
                     <button className="btn btn-sm text-white bg-[#FF444A] hover:bg-[#FF444A] normal-case text-[15px] font-semibold rounded mt-3">View Details</button>
                 </Link>
