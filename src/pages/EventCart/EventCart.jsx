@@ -25,7 +25,7 @@ const EventCart = () => {
 
     return (
         <>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9 mt-7">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9 mt-7 mb-11">
                 {
                     displayServices.map(service => <div key={service.id} className="card rounded-lg p-5 bg-[#F8F8F8] h-96">
                         <div className="mb-1 flex flex-grow justify-center">

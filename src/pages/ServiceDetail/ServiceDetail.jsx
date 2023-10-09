@@ -21,12 +21,12 @@ const ServiceDetail = () => {
     }
 
     return (
-        <div>
+        <div className="mb-11">
             <figure className="flex justify-center"><img className="rounded-md w-[300px] h-[300px]" src={service.image} alt="Service image" /></figure>
             <div className="flex justify-end">
                 <button onClick={handleService} className="btn text-white bg-[#FF444A] hover:bg-[#FF444A] normal-case text-lg font-medium rounded mr-9">Buy Now ${service.price}</button>
             </div>
-            <h3 className="mb-5 text-4xl font-bold">{service.name}</h3>
+            <h3 className="my-5 text-4xl font-bold">{service.name}</h3>
             <p className="text-justify">{service.description}</p>
         </div>
     );
