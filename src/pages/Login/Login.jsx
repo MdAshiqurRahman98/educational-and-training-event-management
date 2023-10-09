@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-
+import { FcGoogle } from 'react-icons/fc';
 
 const Login = () => {
-    const { signIn } = useContext(AuthContext);
+    const { signIn, signInWithGoogle } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
     console.log('Location in the login page', location);
@@ -25,6 +25,16 @@ const Login = () => {
             })
             .catch(error => {
                 console.error(error);
+            })
+    }
+
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.error(error)
             })
     }
 
@@ -52,6 +62,8 @@ const Login = () => {
                 </div>
             </form>
             <p className="text-center mt-4">Don`t have an account? <Link className="text-[#FF444A] font-bold" to="/register">Register</Link></p>
+            <p className="text-center mt-5 mb-7">--------- OR ---------</p>
+            <p className="text-center mb-11"><button onClick={handleGoogleSignIn} className="btn btn-wide btn-outline rounded-3xl normal-case text-base hover:bg-white hover:text-black"><FcGoogle className="w-5 h-5 mt-1"></FcGoogle>Login with Google</button></p>
         </div>
     );
 };

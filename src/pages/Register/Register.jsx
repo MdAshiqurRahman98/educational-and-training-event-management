@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Link } from "react-router-dom";
-
+import { FcGoogle } from 'react-icons/fc';
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser, signInWithGoogle } = useContext(AuthContext);
 
     const handleRegister = e => {
         e.preventDefault();
@@ -26,6 +26,16 @@ const Register = () => {
                 console.error(error)
             })
 
+    }
+
+    const handleGoogleSignUp = () => {
+        signInWithGoogle()
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.error(error)
+            })
     }
 
     return (
@@ -64,6 +74,8 @@ const Register = () => {
                 </div>
             </form>
             <p className="text-center mt-4">Already have an account? <Link className="text-[#FF444A] font-bold" to="/login">Login</Link></p>
+            <p className="text-center mt-5 mb-7">--------- OR ---------</p>
+            <p className="text-center mb-11"><button onClick={handleGoogleSignUp} className="btn btn-wide btn-outline rounded-3xl normal-case text-base hover:bg-white hover:text-black"><FcGoogle className="w-5 h-5 mt-1"></FcGoogle>Register with Google</button></p>
         </div>
     );
 };
