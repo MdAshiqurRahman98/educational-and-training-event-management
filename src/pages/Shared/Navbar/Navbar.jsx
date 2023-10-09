@@ -100,9 +100,8 @@ const Navbar = () => {
                     <li className="text-lg ml-60">
                         {
                             user ? <div className="flex items-center">
-                                <span>{user.email}</span>
-                                <span className="mr-1">{user.displayName}</span>
-                                <span className="mr-1"><img className="rounded-full w-9" src={user.photoURL} alt="" /></span>
+                                <span className="mr-5">{user.displayName}</span>
+                                <span className="mr-5"><img className="rounded-full w-9 h-9" src={user.photoURL} alt="" /></span>
                                 <NavLink
                                     onClick={handleLogOut}
                                 >
