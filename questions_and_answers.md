@@ -43,9 +43,9 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A
 
-<i>Write your explanation here</i>
+<i>No output will be show. Because the returned value isn't stored any variable.</i>
 
 </p>
 </details>
@@ -69,9 +69,9 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A
 
-<i>Write your explanation here</i>
+<i>Because the 'food' array wasn't changed. So, the array will remain same as it is.</i>
 
 </p>
 </details>
@@ -94,9 +94,9 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B
 
-<i>Write your explanation here</i>
+<i>The output will be 'Hi there, undefined'. Because the 'name' variable inside the template literal is replaced with the 'undefined' value.</i>
 
 </p>
 </details>
@@ -122,9 +122,9 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C
 
-<i>Write your explanation here</i>
+<i>Output will be 3. Because the forEach() method iterates over the elements of an array and calls a callback function for each element. The callback function takes the current element of the array as its argument. In this case, the callback function checks if the current element of the array is truthy. If it is, the count variable is incremented by 1. Since the first element of the array is 0, a falsy value, the count variable is not incremented for the first element. However, the count variable is incremented for the remaining three elements of the array, 1, 2, and 3. Therefore, the output of the program is 3.</i>
 
 </p>
 </details>
