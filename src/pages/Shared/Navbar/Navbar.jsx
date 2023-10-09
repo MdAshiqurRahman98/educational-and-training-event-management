@@ -95,19 +95,6 @@ const Navbar = () => {
                             </NavLink>
                         }
                     </li>
-
-                    {/* <li>
-                        {
-                            user ? <>
-                                <span className="mr-1">{user.email}</span>
-                                <span className="mr-3">{user.displayName}</span>
-                                <a onClick={handleLogOut} className="btn btn-sm mr-3 normal-case">Logout</a>
-                            </>
-                                : <Link to="/login">
-                                    <button className="btn btn-sm mr-3 normal-case">Login</button>
-                                </Link>
-                        }
-                    </li> */}
                 </ul>
                 <ul>
                     <li className="text-lg ml-60">
