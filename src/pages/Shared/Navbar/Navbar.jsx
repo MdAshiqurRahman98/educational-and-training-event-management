@@ -97,7 +97,7 @@ const Navbar = () => {
                     </li>
                 </ul>
                 <ul>
-                    <li className="text-lg ml-60">
+                    <li className="text-lg ml-5 lg:ml-60">
                         {
                             user ? <div className="flex items-center">
                                 <span className="mr-5">{user.displayName}</span>
