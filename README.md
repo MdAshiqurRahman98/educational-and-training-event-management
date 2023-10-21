@@ -2,7 +2,7 @@
 
 ### Live Link: https://educationalandtrainingeventmanagement.netlify.app/
 
-### The features and functionalities of Educational and Training Event Management web app are:
+### Features and functionalities of Educational and Training Event Management web app:
 
 - Service List
 - Service Details
@@ -10,3 +10,9 @@
 - User Authentication
 - User Dashboard
 - User Private Page
+
+### Technologies which are used in this app:
+
+- React
+- React-Router
+- Firebase
