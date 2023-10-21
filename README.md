@@ -2,7 +2,7 @@
 
 ### Live Link: https://educationalandtrainingeventmanagement.netlify.app/
 
-### Features and functionalities of Educational and Training Event Management web app:
+### Features of Educational and Training Event Management web app:
 
 - Service List
 - Service Details
